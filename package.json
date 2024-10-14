@@ -1,0 +1,16 @@
+{
+  "name": "rq",
+  "version": "1.0.0",
+  "description": "qr code generator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "express-handlebars": "^8.0.1",
+    "qrcode": "^1.5.4"
+  }
+}
