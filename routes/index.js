@@ -6,8 +6,16 @@ router.get('/',(req,res)=>{
     res.render('index')
 })
 
-router.post('/submit',(req,res)=>{
-    console.log(req.body)
+router.post('/qrcode',(req,res)=>{
+    const URL = req.body.url;
+
+    QRcode.toDataURL(URL,(err, link)=>{
+        if(err){
+            res.json(err)
+        }
+        
+        res.render('qrcode',{url: link})
+    })
 })
 
 module.exports = router;
